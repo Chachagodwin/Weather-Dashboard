@@ -45,6 +45,9 @@ h1 {
     width: 100%;
     margin: 25px 0;
     background: #bbb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .weather-input .seperator::before {
@@ -111,12 +114,12 @@ h1 {
     margin: 20px 0;
 }
 
-.weather-card {
+.weather-cards {
     display: flex;
     gap: 20px;
 }
 
-.weather-card .card {
+.weather-cards .card {
     list-style: none;
     color: #fff;
     padding: 18px 16px;
@@ -125,7 +128,7 @@ h1 {
     width: calc(100% / 5);
 }
 
-.weather-card .card img {
+.weather-cards .card img {
     max-width: 70px;
     margin: 5px 0 -12px 0;
 }
@@ -134,16 +137,16 @@ h1 {
     .weather-data .current-weather {
         padding: 20px;
     }
-    .weather-card {
+    .weather-cards {
         flex-wrap: wrap;
     }
-    .weather-card .card {
+    .weather-cards .card {
         width: calc(100% / 4 - 15px);
     }   
 }
 
 @media (max-width: 1200px) {
-    .weather-card .card {
+    .weather-cards .card {
         width: calc(100% / 3 - 15px);
     }
 }
@@ -152,7 +155,7 @@ h1 {
     .weather-input {
         width: 450px;
     }
-    .weather-card .card {
+    .weather-cards .card {
         width: calc(100% / 2 - 10px);
     }
 }
@@ -166,3 +169,11 @@ h1 {
         width: 100%;
     }
 }
+
+
+
+
+/* "d09f07d90b059c231d10f70de443cedf"
+
+
+/ * 'http://api.openweathermap.org/data/2.5/forecast/?lat=${lat}&lon=${lon}&appid=${API_key}
